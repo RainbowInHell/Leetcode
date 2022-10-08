@@ -17,18 +17,16 @@ public:
     bool canConstruct(string ransomNote, string magazine) {
 
         auto it = ransomNote.begin();
-        int cnt = ransomNote.length();
+        int cnt = 0;
 
         while (it != ransomNote.end())
         {
             if (any_of(magazine.begin(), magazine.end(), iSInSequence(*it)))
             {
                 *find_if(magazine.begin(), magazine.end(), iSInSequence(*it)) = '~';
-                cnt--;
-                if (cnt == 0)
-                {
+                cnt++;
+                if (cnt == ransomNote.length())
                     return true;
-                }
             }
             it++;
         }
