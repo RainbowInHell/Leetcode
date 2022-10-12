@@ -5,16 +5,34 @@
 
 using namespace std;
 
-bool sortByVal(const pair<int, int>& a,
-    const pair<int, int>& b)
-{
-    return (a.second < b.second);
-}
-
 class Solution {
 public:
+    static bool sortByVal(const pair<int, int>& a, const pair<int, int>& b)
+    {
+        if (a.second == b.second) {
+            return a.second < b.second;
+        }
+        return a.second < b.second;
+    }
+
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
 
+        vector<int> result(k);
+        vector<pair<int, int>> vectorOfPairs{ mat.size() };
+        int soldiersCount = 0;
+
+        for (int i = 0; i != mat.size(); i++)
+        {
+            soldiersCount = count_if(mat[i].begin(), mat[i].end(), [](int i) {return i == 1; });
+            vectorOfPairs[i] = make_pair(i, soldiersCount);
+        }
+
+        sort(vectorOfPairs.begin(), vectorOfPairs.end(), sortByVal);
+
+        for (int i = 0; i < k; i++)
+            result[i] = vectorOfPairs[i].first;
+
+        return result;
     }
 };
 
@@ -28,40 +46,10 @@ int main()
         {1, 1, 0, 0, 0},
         {1, 1, 1, 1, 1}
     };
+    int k = 3;
 
-    const int rowsCount = mat.size();
-    map<int, int> tempMap;
+    Solution sol;
 
-    for (int i = 0; i != rowsCount; i++)
-    {
-        tempMap[i] = count_if(mat[i].begin(), mat[i].end(), [](int i) {return i == 1; });
-    }
-
-    vector<pair<int, int>> vec;
-    for (auto it2 = tempMap.begin(); it2 != tempMap.end(); it2++)
-    {
-        vec.push_back(make_pair(it2->first, it2->second));
-    }
-
-    sort(vec.begin(), vec.end(), sortByVal);
-
-    vector<int> result;
-    for (int i = 0; i < vec.size(); i++)
-    {
-        result.push_back(vec[i].first);
-    }
-
-    for (const auto& elem : result)
-    {
-        std::cout << elem << " ";
-    }
-
-    cout << '\n';
-    result.erase(result.begin() + 3, result.end());
-
-    for (const auto& elem : result)
-    {
-        std::cout << elem << " ";
-    }
-
+    for (auto& elem : sol.kWeakestRows(mat, k))
+        cout << elem << " ";
 }
