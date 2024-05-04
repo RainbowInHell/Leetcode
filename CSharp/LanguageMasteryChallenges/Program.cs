@@ -172,5 +172,8 @@ using LanguageMasteryChallenges.LeetCode;
 //Console.WriteLine(_374GuessNumberHigherOrLower.GuessNumber(2126753390));
 
 //1518. Water Bottles
-Console.WriteLine(_1518WaterBottles.NumWaterBottles(15, 4));
+//Console.WriteLine(_1518WaterBottles.NumWaterBottles(15, 4));
+
+//2562. Find the Array Concatenation Value
+Console.WriteLine(_2562FindTheArrayConcatenationValue.FindTheArrayConcVal([5, 14, 13, 8, 12]));
 #endregion
