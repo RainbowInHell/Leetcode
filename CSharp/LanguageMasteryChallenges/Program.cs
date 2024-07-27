@@ -1,5 +1,4 @@
-﻿using LanguageMasteryChallenges.Problems;
-using LanguageMasteryChallenges.LeetCode;
+﻿using LanguageMasteryChallenges.LeetCode;
 
 #region Projecteuler
 
@@ -175,5 +174,15 @@ using LanguageMasteryChallenges.LeetCode;
 //Console.WriteLine(_1518WaterBottles.NumWaterBottles(15, 4));
 
 //2562. Find the Array Concatenation Value
-Console.WriteLine(_2562FindTheArrayConcatenationValue.FindTheArrayConcVal([5, 14, 13, 8, 12]));
+//Console.WriteLine(_2562FindTheArrayConcatenationValue.FindTheArrayConcVal([5, 14, 13, 8, 12]));
+
+//1217. Minimum Cost to Move Chips to The Same Position
+//Console.WriteLine(_1217MinimumCostToMoveChipsToTheSamePosition.MinCostToMoveChips([1,2,3,4,5]));
+
+//1221. Split a String in Balanced Strings
+// Console.WriteLine(_1221SplitAStringInBalancedStrings.BalancedStringSplit("RLRLLRLRLLRLRRLRLRLR"));
+
+//2185. Counting Words With a Given Prefix
+// Console.WriteLine(_2185CountingWordsWithAGivenPrefix.PrefixCount(["pay","attention","practice","attend"], "at"));
+
 #endregion
