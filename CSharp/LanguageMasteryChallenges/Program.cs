@@ -185,4 +185,7 @@
 //2185. Counting Words With a Given Prefix
 // Console.WriteLine(_2185CountingWordsWithAGivenPrefix.PrefixCount(["pay","attention","practice","attend"], "at"));
 
+//2000. Reverse Prefix of Word
+Console.WriteLine(_2000ReversePrefixOfWord.ReversePrefixUsingSpan("abcdefd", 'd'));
+
 #endregion
