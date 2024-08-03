@@ -186,6 +186,9 @@
 // Console.WriteLine(_2185CountingWordsWithAGivenPrefix.PrefixCount(["pay","attention","practice","attend"], "at"));
 
 //2000. Reverse Prefix of Word
-Console.WriteLine(_2000ReversePrefixOfWord.ReversePrefixUsingSpan("abcdefd", 'd'));
+// Console.WriteLine(_2000ReversePrefixOfWord.ReversePrefixUsingSpan("abcdefd", 'd'));
+
+// 2399. Check Distances Between Same Letters
+Console.WriteLine(_2399CheckDistancesBetweenSameLetters.CheckDistancesBasic("abc", [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]));
 
 #endregion
